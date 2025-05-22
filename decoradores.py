@@ -36,4 +36,4 @@ def mayusculas (texto):
 def minusculas (texto):
         print (texto.lower())
 
-minusculas ("Python")
+mayusculas ("Python")
