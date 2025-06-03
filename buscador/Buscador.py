@@ -5,18 +5,19 @@ import datetime
 from pathlib import Path
 import math
 
+#Esta varible toma el inicio de ejecucion del programa
 inicio = time.time()
 
 #Definicion de variables
-ruta = 'C:\\Curso\\practicapython\\buscador' 
-mi_patron = r'N\D{3}-\d{5}' 
+ruta = 'C:\\Curso\\practicapython\\buscador' #Aqui se colocara la ruta de la estructura de directorios 
+mi_patron = r'N\D{3}-\d{5}'  
 hoy = datetime.date.today()
 nros_encontrados = []
 archivos_encontrados = []
 
-#Esta funcion se encarga de buscar # en un archivo
+#Esta funcion se encarga de buscar el patron en un archivo
 def buscar_numero (archivo, patron):
-    este_archivo = open(archivo, 'r')
+    este_archivo = open(archivo, 'r') 
     texto = este_archivo.read()
     if re.search(patron, texto):
         return re.search(patron, texto)
