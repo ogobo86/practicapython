@@ -17,6 +17,7 @@ def page(post_id):
 
 @app.route("/otraruta", methods=['POST'])
 def otraruta():
+    print (url_for('page'))
     print (request.form)
     print (request.form['llave1'])
     print (request.form['llave2'])
